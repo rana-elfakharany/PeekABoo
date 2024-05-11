@@ -53,12 +53,14 @@ pip install -r requirements.txt
 <details>
 <summary> Training</summary>
   
-- After downloading the dataset, place it in the 'data' directory as YOLO format (.yaml)  
+- After downloading the dataset, place it in the 'data' directory as YOLO format (.yaml)
+- After choosing the model that you would like to run from the above table, download the .pt file and place it in the weights folder
 - Navigate to 'tools' and open the 'train.py' file to change the needed parameters in the 'get_args_parser' function
+- Navigate to the data.yaml folder and specify the correct location of the images
 - Run the following command:
   
 ```shell
-python tools/train.py --batch 32 --conf configs/yolov6s6_finetune.py --data data/dataset.yaml --img 1280 --device 0 
+ python tools/train.py --batch 32 --conf configs/yolov6m6_finetune.py --data /localHome/cloudies/PeekABoo/SeaDronesSee-Yolov8/data.yaml --img 1280 --device 3 --epochs 50
 ```
 
 If your training is interrupted, you can continue the training by running the following:
