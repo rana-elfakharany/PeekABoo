@@ -25,15 +25,17 @@ The dataset to be used will be the
 - Assurance of robustness of the model
 
 ## Models
-| Model | Size | mAP<sup>test<br/>0.5:0.95 | mAP<sup>test<br/>0.5 | Precision | Recall | F1-Score | Inference Time |
+| Model |Params<br/><sup> (M) | mAP<sup>test<br/>0.5:0.95 | mAP<sup>test<br/>0.5 | Precision | Recall | F1-Score | Inference Time |
 | :------------------ | --------- | -------- | --------- | ---------- | -------- | --------- | -------- |
+| [**YOLOv6-S6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6s6.pt) | 41.32 | 0 | 0 | 0 | 0 | 0 | 0 |
 | [**YOLOv6-N6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6n6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [**YOLOv6-S6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6s6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | [**YOLOv6-M6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6m6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | [**YOLOv6-L6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6l6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 
-## Quick Start
+## Steps
+
+For the steps of running the models, we followed the given [Github](https://github.com/meituan/YOLOv6/tree/0.3.0)
 
 <details>
 <summary> Install</summary>
@@ -50,118 +52,44 @@ pip install -r requirements.txt
 
 <details>
 <summary> Training</summary>
-
-
-Single GPU
-
+  
+- After downloading the dataset, place it in the 'data' directory as YOLO format (.yaml)  
+- Navigate to 'tools' and open the 'train.py' file to change the needed parameters in the 'get_args_parser' function
+- Run the following command:
+  
 ```shell
-# P5 models
-python tools/train.py --batch 32 --conf configs/yolov6s_finetune.py --data data/dataset.yaml --fuse_ab --device 0
-# P6 models
-python tools/train.py --batch 32 --conf configs/yolov6s6_finetune.py --data data/dataset.yaml --img 1280 --device 0
+python tools/train.py --batch 32 --conf configs/yolov6s6_finetune.py --data data/dataset.yaml --img 1280 --device 0 
 ```
 
-Multi GPUs (DDP mode recommended)
-
+If your training is interrupted, you can continue the training by running the following:
 ```shell
-# P5 models
-python -m torch.distributed.launch --nproc_per_node 8 tools/train.py --batch 256 --conf configs/yolov6s_finetune.py --data data/dataset.yaml --fuse_ab --device 0,1,2,3,4,5,6,7
-# P6 models
-python -m torch.distributed.launch --nproc_per_node 8 tools/train.py --batch 128 --conf configs/yolov6s6_finetune.py --data data/dataset.yaml --img 1280 --device 0,1,2,3,4,5,6,7
-```
-- fuse_ab: add anchor-based auxiliary branch and use Anchor Unified Training Mode(Not supported on P6 models)
-- conf: select config file to specify network/optimizer/hyperparameters. We recommend to apply yolov6n/s/m/l_finetune.py when training on your custom dataset.
-- data: prepare [COCO](http://cocodataset.org) dataset, [YOLO format coco labels](https://github.com/meituan/YOLOv6/releases/download/0.1.0/coco2017labels.zip) and specify dataset paths in data.yaml
-- make sure your dataset structure as follows:
-```
-├── coco
-│   ├── annotations
-│   │   ├── instances_train2017.json
-│   │   └── instances_val2017.json
-│   ├── images
-│   │   ├── train2017
-│   │   └── val2017
-│   ├── labels
-│   │   ├── train2017
-│   │   ├── val2017
-│   ├── LICENSE
-│   ├── README.txt
-```
-
-
-Reproduce our results on COCO ⭐️ [Train COCO Dataset](./docs/Train_coco_data.md)
-
-<details>
-<summary>Resume training</summary>
-
-If your training process is corrupted, you can resume training by
-```
 # single GPU training.
 python tools/train.py --resume
 
 # multi GPU training.
 python -m torch.distributed.launch --nproc_per_node 8 tools/train.py --resume
 ```
-Above command will automatically find the latest checkpoint in YOLOv6 directory, then resume the training process. 
+Doing so would automatically find the latest checkpoint in YOLOv6 directory and resume training from there.
 
-Your can also specify a checkpoint path to `--resume` parameter by
-```
-# remember to replace /path/to/your/checkpoint/path to the checkpoint path which you want to resume training.
---resume /path/to/your/checkpoint/path
-```
-This will resume from the specific checkpoint you provide.
-
-</details>
 </details>
 
 <details>
 <summary> Evaluation</summary>
 
-Reproduce mAP on COCO val2017 dataset with 640×640 or 1280x1280 resolution ⭐️
-
+- Run the following command to evaluate the model:
 ```shell
-# P5 models
-python tools/eval.py --data data/coco.yaml --batch 32 --weights yolov6s.pt --task val --reproduce_640_eval
-# P6 models
-python tools/eval.py --data data/coco.yaml --batch 32 --weights yolov6s6.pt --task val --reproduce_640_eval --img 1280
+python tools/eval.py --data ../SeaDronesSee-Yolov8/test.yaml --batch 32 --weights ./runs/train/LaS2n/weights/best_ckpt.pt --task val --reproduce_640_eval --img 1280 --name yolov6n6
 ```
-- verbose: set True to print mAP of each classes.
-- do_coco_metric: set True / False to enable / disable pycocotools evaluation method.
-- do_pr_metric: set True / False to print or not to print the precision and recall metrics.
-- config-file: specify a config file to define all the eval params, for example: [yolov6n_with_eval_params.py](configs/experiment/yolov6n_with_eval_params.py)
+
 </details>
 
-
 <details>
-<summary>Inference</summary>
+<summary> Inference </summary>
 
-First, download a pretrained model from the YOLOv6 [release](https://github.com/meituan/YOLOv6/releases/tag/0.3.0) or use your trained model to do inference.
-
-Second, run inference with `tools/infer.py`
+- Use your trained model to do the inference
+- Run inference using the 'infer.py' file found in the 'tools' folder
 
 ```shell
-# P5 models
-python tools/infer.py --weights yolov6s.pt --source img.jpg / imgdir / video.mp4
-# P6 models
 python tools/infer.py --weights yolov6s6.pt --img 1280 --source img.jpg / imgdir / video.mp4
 ```
 </details>
-
-<details>
-<summary> Deployment</summary>
-
-*  [ONNX](./deploy/ONNX)
-*  [OpenCV Python/C++](./deploy/ONNX/OpenCV)
-*  [OpenVINO](./deploy/OpenVINO)
-*  [TensorRT](./deploy/TensorRT)
-</details>
-
-<details open>
-<summary> Tutorials</summary>
-
-*  [Train COCO Dataset](./docs/Train_coco_data.md)
-*  [Train custom data](./docs/Train_custom_data.md)
-*  [Test speed](./docs/Test_speed.md)
-*  [Tutorial of Quantization for YOLOv6](./docs/Tutorial%20of%20Quantization.md)
-</details>
-
