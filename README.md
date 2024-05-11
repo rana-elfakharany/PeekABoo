@@ -24,25 +24,13 @@ The dataset to be used will be the
 - High complexity due to the presence of a variety of objects
 - Assurance of robustness of the model
 
-
 ## Models
-
-
-| Model                                                        | Size | mAP<sup>val<br/>0.5:0.95 | Speed<sup>T4<br/>trt fp16 b1 <br/>(fps) | Speed<sup>T4<br/>trt fp16 b32 <br/>(fps) | Params<br/><sup> (M) | FLOPs<br/><sup> (G) |
-| :----------------------------------------------------------- | ---- | :----------------------- | --------------------------------------- | ---------------------------------------- | -------------------- | ------------------- |
-| [**YOLOv6-N6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6n6.pt) | 1280 | 44.9                     | 228                                     | 281                                      | 10.4                 | 49.8                |
-| [**YOLOv6-S6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6s6.pt) | 1280 | 50.3                     | 98                                      | 108                                      | 41.4                 | 198.0               |
-| [**YOLOv6-M6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6m6.pt) | 1280 | 55.2                     | 47                                      | 55                                       | 79.6                 | 379.5               |
-| [**YOLOv6-L6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6l6.pt) | 1280 | 57.2                     | 26                                      | 29                                       | 140.4                | 673.4               |
-<details>
-<summary>Table Notes</summary>
-
-- All checkpoints are trained with self-distillation except for YOLOv6-N6/S6 models trained to 300 epochs without distillation.  
-- Results of the mAP and speed are evaluated on [COCO val2017](https://cocodataset.org/#download) dataset with the input resolution of 640×640 for P5 models and 1280x1280 for P6 models.
-- Speed is tested with TensorRT 7.2 on T4.
-- Refer to [Test speed](./docs/Test_speed.md) tutorial to reproduce the speed results of YOLOv6.
-- Params and FLOPs of YOLOv6 are estimated on deployed models.
-</details>
+| Model | Size | mAP<sup>test<br/>0.5:0.95 | mAP<sup>test<br/>0.5 | Precision | Recall | F1-Score | Inference Time |
+| :------------------ | --------- | -------- | --------- | ---------- | -------- | --------- | -------- |
+| [**YOLOv6-N6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6n6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| [**YOLOv6-S6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6s6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| [**YOLOv6-M6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6m6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| [**YOLOv6-L6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6l6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 
 ## Quick Start
