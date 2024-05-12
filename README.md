@@ -109,10 +109,11 @@ Here is an image of the result obtained through object detection.
   
 ![78_jpg rf 3198dd3d27094c113ff7e37d67385cf4 (1)](https://github.com/rana-elfakharany/PeekABoo/assets/114260072/806c7b6e-52a3-48cd-b704-38fdd0ea639a)
 
-The other results including the performance metrics and graphs can be found under the results folder.
-
 - Resulting image with bounding boxes:
   
 ![78_jpg rf 3198dd3d27094c113ff7e37d67385cf4](https://github.com/rana-elfakharany/PeekABoo/assets/114260072/27add0aa-d728-46a7-a68f-535c7ccbf8b9)
 
+
+The other results including the performance metrics and graphs can be found under the results folder.
 </details>
+
