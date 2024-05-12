@@ -27,12 +27,12 @@ The dataset to be used will be the
 - Assurance of robustness of the model
 
 ## Models
-| Model |Params<br/><sup> (M) | mAP<sup>test<br/>0.5:0.95 | mAP<sup>test<br/>0.5 | Precision | Recall | F1-Score | Inference Time (s) |
+| Model |Params<br/><sup> (M) | mAP<sup>test<br/>0.5:0.95 | mAP<sup>test<br/>0.5 | Precision | Recall | F1-Score | Inference Time (ms) |
 | :------------------ | --------- | -------- | --------- | ---------- | -------- | --------- | -------- |
+| [**YOLOv6-N6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6n6.pt) | 10.34 | 0.346 | 0.602 | 0.663 | 0.61 | 0.635 | 1.78 |
 | [**YOLOv6-S6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6s6.pt) | 41.32 | 0.375 | 0.636 | 0.66 | 0.68 | 0.67 | 4.99 |
-| [**YOLOv6-N6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6n6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [**YOLOv6-M6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6m6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| [**YOLOv6-L6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6l6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| [**YOLOv6-M6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6m6.pt) | 79.53 | 0.380 | 0.642 | 0.675 | 0.69 | 0.683 | 8.03 |
+| [**YOLOv6-L6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6l6.pt) | 140.21 | 0.392 | 0.658 | 0.69 | 0.69 | 0.69 | 16.32 |
 
 [Our Checkpoints](https://drive.google.com/drive/folders/11luhl9lqkqAX4W7mA_q3b1aLuFCi3QOE?usp=sharing)
 ## Steps
