@@ -1,8 +1,5 @@
 # Peek A Boo: Towards Smart Search and Rescue
 
-**Presentation Link:**
-[CV Presentation](https://www.canva.com/design/DAGFBrdaVhI/Bwyfl3nJT_WqUEDw_G7l5g/edit?utm_content=DAGFBrdaVhI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
 **Course:** COE 49413 - Computer Vision
 
 **Instructor:** Dr. Omar Arif
