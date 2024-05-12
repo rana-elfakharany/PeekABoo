@@ -16,6 +16,8 @@
 ## Notes
 Some of the files are too large to upload. Therefore, they can be found in [Google Drive](https://drive.google.com/drive/folders/1l5YVM6BEkrCJpvJpsebDB-kqLxVlAUcA?usp=drive_link). In addition, the presentation/slides can be found [here](https://www.canva.com/design/DAGFBrdaVhI/Bwyfl3nJT_WqUEDw_G7l5g/edit?utm_content=DAGFBrdaVhI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
 
+For the demonstration video, please click [here](https://drive.google.com/file/d/1S5wRVJuA6R-gonCHZM1ZWfVPfrTonNZM/view?usp=sharing).
+
 ## Objective
 The primary objective of this project is to execute object detection in marine environments through several computer vision techniques and detect the presence of humans in these environments. The purpose of identifying humans is to improve the surveillance and monitoring systems in tasks such as search and rescue missions, thereby ensuring maritime security.
 
@@ -105,6 +107,8 @@ Here is an image of the result obtained through object detection.
 - Original Image:
   
 ![78_jpg rf 3198dd3d27094c113ff7e37d67385cf4 (1)](https://github.com/rana-elfakharany/PeekABoo/assets/114260072/806c7b6e-52a3-48cd-b704-38fdd0ea639a)
+
+The other results including the performance metrics and graphs can be found under the results folder.
 
 - Resulting image with bounding boxes
   
