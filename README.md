@@ -44,6 +44,7 @@ For the steps of running the models, we followed the given [Github](https://gith
 <details>
 <summary> Install</summary>
 
+First, install YOLOv6 and the required libraries using the following command. The requirements.txt file is found above.
 
 ```shell
 git clone https://github.com/meituan/YOLOv6
