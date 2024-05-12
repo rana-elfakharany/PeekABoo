@@ -9,7 +9,7 @@
 **Group members:**
 | **Name** | **ID** | 
 | :----------------------------------------------------------- | ---- | 
-| Mohammed Al Shafai | b00087311 |
+| Mohamed Alshafai | b00087311 |
 | Rana Elfakharany | g00087725 |
 | Hiba Saleem | g00087239 |
 
