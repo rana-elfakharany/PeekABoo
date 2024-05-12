@@ -101,11 +101,13 @@ python tools/infer.py --weights yolov6s6.pt --img 1280 --source img.jpg / imgdir
 <details>
 <summary> Results </summary>
 
-Here are the images of some results obtained through object detection.
+Here is an image of the result obtained through object detection.
 - Original Image:
+  
 ![78_jpg rf 3198dd3d27094c113ff7e37d67385cf4 (1)](https://github.com/rana-elfakharany/PeekABoo/assets/114260072/806c7b6e-52a3-48cd-b704-38fdd0ea639a)
 
-- Resulting image with bounding boxes:
+- Resulting image with bounding boxes
+  
 ![78_jpg rf 3198dd3d27094c113ff7e37d67385cf4](https://github.com/rana-elfakharany/PeekABoo/assets/114260072/27add0aa-d728-46a7-a68f-535c7ccbf8b9)
 
 </details>
