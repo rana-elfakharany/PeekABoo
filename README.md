@@ -34,7 +34,7 @@ The dataset to be used will be the
 | [**YOLOv6-M6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6m6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | [**YOLOv6-L6**](https://github.com/meituan/YOLOv6/releases/download/0.3.0/yolov6l6.pt) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-
+[Checkpoints](https://drive.google.com/drive/folders/11luhl9lqkqAX4W7mA_q3b1aLuFCi3QOE?usp=sharing)
 ## Steps
 
 For the steps of running the models, we followed the given [Github](https://github.com/meituan/YOLOv6/tree/0.3.0).
