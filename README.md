@@ -19,7 +19,7 @@ The primary objective of this project is to execute object detection in marine e
 
 ## Dataset
 The dataset to be used will be the 
-[SeaDronesSee Dataset](https://openaccess.thecvf.com/content/WACV2022/html/Varga_SeaDronesSee_A_Maritime_Benchmark_for_Detecting_Humans_in_Open_Water_WACV_2022_paper.html). The choice behind this dataset is supported by a number of reasons:
+[SeaDronesSee Dataset](https://universe.roboflow.com/ntnu-2wibj/seadronessee-odv2/dataset/11/images) used in the [WACV 2022 paper](https://openaccess.thecvf.com/content/WACV2022/html/Varga_SeaDronesSee_A_Maritime_Benchmark_for_Detecting_Humans_in_Open_Water_WACV_2022_paper.html). The choice behind this dataset is supported by a number of reasons:
 - High number of samples available for rigorous training, validation, and testing phases
 - High complexity due to the presence of a variety of objects
 - Assurance of robustness of the model
@@ -35,7 +35,7 @@ The dataset to be used will be the
 
 ## Steps
 
-For the steps of running the models, we followed the given [Github](https://github.com/meituan/YOLOv6/tree/0.3.0)
+For the steps of running the models, we followed the given [Github](https://github.com/meituan/YOLOv6/tree/0.3.0).
 
 <details>
 <summary> Install</summary>
