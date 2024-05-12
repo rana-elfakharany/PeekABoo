@@ -1,5 +1,8 @@
 # Peek A Boo: Towards Smart Search and Rescue
 
+**Presentation Link:**
+[CV Presentation](https://www.canva.com/design/DAGFBrdaVhI/Bwyfl3nJT_WqUEDw_G7l5g/edit?utm_content=DAGFBrdaVhI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 **Course:** COE 49413 - Computer Vision
 
 **Instructor:** Dr. Omar Arif
@@ -12,7 +15,6 @@
 | Mohammed Al Shafai | b00087311 |
 | Rana Elfakharany | g00087725 |
 | Hiba Saleem | g00087239 |
-
 
 ## Objective
 The primary objective of this project is to execute object detection in marine environments through several computer vision techniques and detect the presence of humans in these environments. The purpose of identifying humans is to improve the surveillance and monitoring systems in tasks such as search and rescue missions, thereby ensuring maritime security.
