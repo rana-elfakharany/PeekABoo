@@ -16,6 +16,9 @@
 | Rana Elfakharany | g00087725 |
 | Hiba Saleem | g00087239 |
 
+## Notes
+Some of the files are too large to upload. Therefore, they can be found in [Google Drive](https://drive.google.com/drive/folders/1l5YVM6BEkrCJpvJpsebDB-kqLxVlAUcA?usp=drive_link). In addition, the presentation/slides can be found [here](https://www.canva.com/design/DAGFBrdaVhI/Bwyfl3nJT_WqUEDw_G7l5g/edit?utm_content=DAGFBrdaVhI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
+
 ## Objective
 The primary objective of this project is to execute object detection in marine environments through several computer vision techniques and detect the presence of humans in these environments. The purpose of identifying humans is to improve the surveillance and monitoring systems in tasks such as search and rescue missions, thereby ensuring maritime security.
 
